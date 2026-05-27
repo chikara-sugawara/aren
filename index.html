@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ボイス資料 ／ アレン</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0d0a1a;--bg2:#16112a;--bg3:#1e1838;
+  --mine:#f08080;--border:rgba(139,92,246,0.22);
+  --text:#ede8f5;--text2:#9088aa;--gold:#e8b84b;
+}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;
+  font-size:15px;line-height:1.7;padding-bottom:50px;
+}
+/* ===== ヘッダー ===== */
+.page-header{
+  background:linear-gradient(135deg,#2a0e10,#2a0e10cc);
+  border-bottom:2px solid #f08080;
+  padding:20px 18px 16px;position:sticky;top:0;z-index:50;
+}
+.header-inner{display:flex;align-items:center;gap:14px;}
+.header-icon{font-size:40px;}
+.header-text h1{font-size:20px;color:#f08080;letter-spacing:1px;margin-bottom:2px;}
+.header-text p{font-size:12px;color:rgba(255,255,255,0.6);}
+.header-files{font-size:11px;color:rgba(255,255,255,0.5);font-family:monospace;margin-top:3px;}
+
+/* ===== プロフィールカード ===== */
+.profile-card{
+  margin:14px 14px 0;
+  background:#16112a;border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;
+}
+.profile-head{
+  padding:10px 14px;
+  background:linear-gradient(135deg,#2a0e10aa,#2a0e1055);
+  border-bottom:1px solid var(--border);
+  font-size:11px;color:#f08080;letter-spacing:1px;
+}
+.profile-body{padding:12px 14px;font-size:13px;color:#c0b8d8;line-height:1.8;}
+.vtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.vtag{
+  font-size:12px;padding:4px 11px;border-radius:20px;
+  background:rgba(139,92,246,0.15);color:#9080cc;
+  border:1px solid rgba(139,92,246,0.3);
+}
+.special-badge{
+  margin:10px 14px 0;padding:10px 14px;
+  background:rgba(192,57,43,0.15);color:#f08080;
+  border:1px solid rgba(192,57,43,0.3);
+  border-radius:10px;font-size:12px;line-height:1.8;
+}
+
+/* ===== 凡例 ===== */
+.legend{
+  margin:12px 14px 0;
+  display:flex;gap:10px;flex-wrap:wrap;
+  font-size:12px;color:var(--text2);
+  padding:9px 12px;background:#16112a;
+  border:1px solid var(--border);border-radius:8px;
+}
+.leg-mine{color:#f08080;font-weight:bold;}
+.leg-other{color:var(--text2);}
+
+/* ===== シーンブロック ===== */
+.scene-block{margin:14px 14px 0;}
+.scene-title{
+  font-size:13px;color:var(--gold);
+  padding:8px 12px;
+  background:#16112a;border:1px solid var(--border);
+  border-radius:10px 10px 0 0;
+  letter-spacing:1px;
+}
+.scene-lines{
+  background:#100c20;
+  border:1px solid var(--border);border-top:none;
+  border-radius:0 0 10px 10px;
+  padding:10px;display:flex;flex-direction:column;gap:6px;
+}
+
+/* ===== セリフ行（担当） ===== */
+.line.mine{
+  background:rgba(240,128,128,0.1);
+  border:1.5px solid #f08080;
+  border-radius:8px;padding:9px 11px;
+}
+.mine-label{color:#f08080;font-weight:bold;font-size:12px;}
+.mine-text{
+  font-size:15px;color:#ffffff;
+  font-weight:500;line-height:1.75;margin-top:4px;
+}
+.line-note{
+  font-size:12px;color:#f08080;opacity:0.8;
+  margin-top:5px;padding-top:5px;
+  border-top:1px solid rgba(240,128,128,0.3);
+  font-style:italic;
+}
+
+/* ===== セリフ行（他キャラ） ===== */
+.line.other{
+  padding:6px 10px;
+  border-radius:6px;
+  background:transparent;
+}
+.other-label{font-size:11px;color:var(--text2);display:block;margin-bottom:2px;}
+.other-text{font-size:13px;color:#7070a0;line-height:1.7;}
+
+/* ===== ファイルタグ ===== */
+.line-meta{display:flex;align-items:center;gap:8px;margin-bottom:2px;}
+.file-tag{
+  font-size:10px;padding:2px 8px;
+  background:rgba(0,0,0,0.4);color:rgba(255,255,255,0.5);
+  border-radius:4px;font-family:monospace;
+}
+.char-label{font-size:12px;}
+
+/* ===== 注意書き ===== */
+.note-box{
+  margin:14px;padding:12px 14px;
+  background:rgba(139,92,246,0.08);
+  border:1px solid rgba(139,92,246,0.25);
+  border-radius:10px;font-size:12px;color:var(--text2);line-height:1.8;
+}
+.note-box strong{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-inner">
+    <div class="header-icon">⚔️</div>
+    <div class="header-text">
+      <h1>アレン</h1>
+      <p>勇者・男性</p>
+      <p class="header-files">aren_01〜aren_12</p>
+    </div>
+  </div>
+</div>
+
+<div class="profile-card">
+  <div class="profile-head">▶ キャラクター・性格</div>
+  <div class="profile-body">
+    真っ直ぐで熱血、少し抜けているが仲間思い。感情が表に出やすく、怒りも喜びも隠せない。師匠への尊敬と照れが混じった話し方をする。旅が進むにつれ自分の出自への戸惑いで言葉数が少なくなる場面も。
+    <div class="vtags"><span class="vtag">10〜20代 男性</span><span class="vtag">明るく元気</span><span class="vtag">芯がある</span><span class="vtag">時に繊細</span></div>
+  </div>
+</div>
+
+
+
+<div class="note-box">
+  <strong>【収録について】</strong><br>
+  ・（）内の地の文は収録不要です<br>
+  ・……は間を取ってください。——は余韻です<br>
+  ・<span style="color:#f08080;font-weight:bold;">■ 色付きのセリフ</span>があなたの担当セリフです
+</div>
+
+<div class="legend">
+  <span class="leg-mine">■ あなたのセリフ（収録対象）</span>
+  <span class="leg-other">■ 相手のセリフ（参考・前後の流れ）</span>
+</div>
+
+<div class="scene-block">
+  <div class="scene-title">🏰 旅立ちの朝</div>
+  <div class="scene-lines"><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_01</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">……よし。行くぞ！</div>
+  <div class='line-note'>🎭 短く力強く。旅立ちの緊張と興奮。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">いつもそれだけ。もうちょっとかっこいい台詞はないの、アレン。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🔮 ライオス</span>
+  <div class="line-text other-text">どうせ頭の中は空っぽだろう。剣だけ持っていけ。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_02</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">うるさいな！……あれ、あの人——</div>
+  <div class='line-note'>🎭 言い返した直後、遠くの人物に気づき声が落ちる。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🛡️ グランツ</span>
+  <div class="line-text other-text">遅いぞ。もう日が高い。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_03</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">な、なんで来てるんですか！わざわざ——</div>
+  <div class='line-note'>🎭 師匠への驚きと嬉しさ。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🛡️ グランツ</span>
+  <div class="line-text other-text">黙れ。……剣の握り方、直ってないな。右手の小指、もう少し締めろ。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_04</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">（苦笑いしながら剣を握り直す）……はい。</div>
+  <div class='line-note'>🎭 「はい」だけ素直に短く。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🛡️ グランツ</span>
+  <div class="line-text other-text">行ってこい。……必ず帰ってこい。お前が死んだら——俺が悲しむだろうが。</div>
+</div><div class="line other">
+  <span class="char-label other-label">✨ セラフィア</span>
+  <div class="line-text other-text">（小声で）アレンさん……絶対に、帰ってきてくださいね。</div>
+</div></div>
+</div><div class="scene-block">
+  <div class="scene-title">👑 謁見の間の影</div>
+  <div class="scene-lines"><div class="line other">
+  <span class="char-label other-label">👑 エドワード三世</span>
+  <div class="line-text other-text">……来たか。勇者よ、頼む。この戦いを——終わらせてくれ。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_05</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">陛下、どうか顔を上げてください。必ず魔王を——</div>
+  <div class='line-note'>🎭 王への敬語。真剣で誠実。</div>
+</div><div class="line other">
+  <span class="char-label other-label">👑 エドワード三世</span>
+  <div class="line-text other-text">魔王を倒せば……本当に、平和が来ると思うか？</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_06</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">……それは、どういう意味で——</div>
+  <div class='line-note'>🎭 戸惑いを隠せない。</div>
+</div><div class="line other">
+  <span class="char-label other-label">👑 エドワード三世</span>
+  <div class="line-text other-text">いや、忘れろ。……頼む。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🕯️ フィリア</span>
+  <div class="line-text other-text">（心の中で）陛下……また夢を見たのですか。いつも笑っている、あの穏やかな声の夢を。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_07</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">（退室しながら）陛下は……何かを知っているような気がした。</div>
+  <div class='line-note'>🎭 独白。静かで不安げ。</div>
+</div></div>
+</div><div class="scene-block">
+  <div class="scene-title">🧙 旅の賢者</div>
+  <div class="scene-lines"><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">おや。若い旅人たちよ、疲れた顔をしておるな。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">ええ、まあ……あなたは？</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">わしはゼフィルと申す。長く旅をしておるただの老いぼれよ。……して、魔王城へ向かうのかね？</div>
+</div><div class="line other">
+  <span class="char-label other-label">🔮 ライオス</span>
+  <div class="line-text other-text">……なぜそれを。</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">ふふ。旅人の目をしておる。それだけよ。——魔王を倒した後のことは、考えておるかね？</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_08</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">倒した後……？平和になる、それだけじゃないんですか？</div>
+  <div class='line-note'>🎭 純粋な疑問。</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">そうだといいのう。……人も、魔族も、すべては神の御心のままよ。</div>
+</div><div class="line other">
+  <span class="char-label other-label">✨ セラフィア</span>
+  <div class="line-text other-text">（小声で）なんか……この方、少し怖いですね。</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">ははは。老人の繰り言よ。精々励むがいい——勇者よ。</div>
+</div></div>
+</div><div class="scene-block">
+  <div class="scene-title">🩸 剣を交える前に</div>
+  <div class="scene-lines"><div class="line other">
+  <span class="char-label other-label">🖤 ヴァルディス</span>
+  <div class="line-text other-text">……お前、私に似ていると思わないか。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_09</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">は？何が言いたい。</div>
+  <div class='line-note'>🎭 敵への警戒と苛立ち。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🖤 ヴァルディス</span>
+  <div class="line-text other-text">その目だ。怒りと、どうしようもない優しさが、同じ形をしている。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_10</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">……俺は魔王なんかと——</div>
+  <div class='line-note'>🎭 言いかけて止まる。動揺が大きい。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🖤 ヴァルディス</span>
+  <div class="line-text other-text">昔、ある女神が人間界に降りたことがある。とても不器用で、泣き虫で——人間を愛しすぎた神だ。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_11</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">……何の話だ。</div>
+  <div class='line-note'>🎭 冷静を装うが声が震える。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🖤 ヴァルディス</span>
+  <div class="line-text other-text">私の話であり——お前の話だ。（静かに剣を抜く）剣で答えろ。それが、お前の返事だ。</div>
+</div><div class="line other">
+  <span class="char-label other-label">✨ セラフィア</span>
+  <div class="line-text other-text">アレン！（思わず名前を呼ぶ）——あなたが誰であっても、あなたはあなたです。忘れないで。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">aren_12</span>
+    <span class="char-label mine-label">⚔️ アレン</span>
+  </div>
+  <div class="line-text mine-text">……（剣を構え、静かに笑う）わかってる。行くぞ。</div>
+  <div class='line-note'>🎭 覚悟が決まった静かな声。</div>
+</div></div>
+</div>
+
+</body>
+</html>
